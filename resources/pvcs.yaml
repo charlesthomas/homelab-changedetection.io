@@ -1,0 +1,15 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: changedetection-io-data
+  labels:
+    app.kubernetes.io/instance: changedetection-io
+    app.kubernetes.io/name: changedetection-io
+spec:
+  accessModes:
+    - "ReadWriteMany"
+  resources:
+    requests:
+      storage: "1Gi"
+  storageClassName: "longhorn"
