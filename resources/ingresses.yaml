@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: changedetection-io
+  namespace: changedetection-io
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: delta.crt.house
+spec:
+  ingressClassName: nginx-internal
+  rules:
+    - host: "delta.crt.house"
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: changedetection-io
+                port:
+                  number: 5000
+  tls:
+    - hosts:
+      - delta.crt.house
