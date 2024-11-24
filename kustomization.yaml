@@ -1,0 +1,33 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: changedetection-io
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-changedetection.io
+commonLabels:
+  app: changedetection-io
+
+resources:
+- resources/deployments.yaml
+- resources/ingresses.yaml
+- resources/namespaces.yaml
+- resources/pvcs.yaml
+- resources/services.yaml
+patches:
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: changedetection-io
+      namespace: changedetection-io
+      annotations:
+        gethomepage.dev/href: https://delta.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: Website Watcher
+        gethomepage.dev/group: Tools
+        gethomepage.dev/icon: changedetection-io
+        gethomepage.dev/name: ChangeDetection.io
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress

@@ -1,0 +1,34 @@
+_commit: v1.12.1-9-g5863ce6
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+homepageDescription: Website Watcher
+homepageEnabled: true
+homepageGroup: Tools
+homepageIcon: changedetection-io
+homepageName: ChangeDetection.io
+ingClass: nginx-internal
+ingCname: ''
+ingExtraAnnotations: ''
+ingHost: delta.crt.house
+ingName: changedetection-io
+ingPathType: Prefix
+ingWebSockets: false
+ingress: true
+labels: 'app: changedetection-io'
+name: changedetection-io
+namespace: changedetection-io
+pvc: false
+reloader: false
+resources:
+- deployments.yaml
+- ingresses.yaml
+- pvcs.yaml
+- services.yaml
+service: false
+serviceAccount: false
+svcName: changedetection-io
+svcPortNum: 5000
+upstreamURL: https://changedetection.io/
+url: https://github.com/charlesthomas/homelab-changedetection.io
