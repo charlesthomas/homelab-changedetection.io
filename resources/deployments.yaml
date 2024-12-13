@@ -72,7 +72,7 @@ spec:
               value: "true"
             - name: ENABLE_DEBUGGER
               value: "false"
-          image: ghcr.io/browserless/chromium:v2.23.0
+          image: ghcr.io/browserless/chromium:v2.24.0
           name: browserless
           ports:
             - containerPort: 3000
