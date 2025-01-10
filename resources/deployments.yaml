@@ -28,7 +28,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
         - name: changedetection-io
-          image: ghcr.io/dgtlmoon/changedetection.io:0.48.05
+          image: ghcr.io/dgtlmoon/changedetection.io:0.48.06
           imagePullPolicy: IfNotPresent
           env:
             - name: BASE_URL
