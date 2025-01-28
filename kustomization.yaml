@@ -26,7 +26,7 @@ patches:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/description: Website Watcher
         gethomepage.dev/group: Tools
-        gethomepage.dev/icon: changedetection-io
+        gethomepage.dev/icon: changedetection
         gethomepage.dev/name: ChangeDetection.io
         gethomepage.dev/pod-selector: ""
   target:

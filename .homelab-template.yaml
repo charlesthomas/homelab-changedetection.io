@@ -6,7 +6,7 @@ helm: false
 homepageDescription: Website Watcher
 homepageEnabled: true
 homepageGroup: Tools
-homepageIcon: changedetection-io
+homepageIcon: changedetection
 homepageName: ChangeDetection.io
 ingClass: nginx-internal
 ingCname: ''
