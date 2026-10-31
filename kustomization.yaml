@@ -5,8 +5,10 @@ namespace: changedetection-io
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-changedetection.io
-commonLabels:
-  app: changedetection-io
+labels:
+- includeSelectors: true
+  pairs:
+    app: changedetection-io
 
 resources:
 - resources/deployments.yaml
@@ -31,3 +33,11 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
+configMapGenerator:
+- name: grafana-dashboard-changedetection-io
+  files:
+  - grafana/changedetection-io.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
