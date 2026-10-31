@@ -5,8 +5,10 @@ namespace: changedetection-io
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-changedetection.io
-commonLabels:
-  app: changedetection-io
+labels:
+- includeSelectors: true
+  pairs:
+    app: changedetection-io
 
 resources:
 - resources/deployments.yaml
